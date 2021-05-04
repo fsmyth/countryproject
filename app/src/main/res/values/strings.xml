@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Country Collection</string>
+    <string name="main_title">The World</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Placeholder Text</string>
+</resources>

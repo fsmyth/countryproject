@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/country_grid_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1e2121"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="16dp">
+
+<!--Individual country name here-->
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@{viewModel.selectedCountry.name}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#dedede"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Country" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

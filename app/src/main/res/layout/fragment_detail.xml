@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="com.example.countries.ui.shared.SharedViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:background="#1e2121">
+
+<!--        Country name-->
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.selectedCountry.name}"
+            android:textColor="#dedede"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Country" />
+
+<!--region-->
+        <TextView
+            android:id="@+id/regionTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Region:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#dedede"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+        <TextView
+            android:id="@+id/regionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.selectedCountry.region}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#dedede"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regionTitle"
+            tools:text="Region" />
+
+<!--capital-->
+        <TextView
+            android:id="@+id/capTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Capital:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#dedede"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regionText" />
+
+        <TextView
+            android:id="@+id/capText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.selectedCountry.capital}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#dedede"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/capTitle"
+            tools:text="Capital " />
+
+<!--population-->
+        <TextView
+            android:id="@+id/popTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Population:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#dedede"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/capText" />
+
+        <TextView
+            android:id="@+id/popText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.selectedCountry.population}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#dedede"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popTitle"
+            tools:text="Population" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
